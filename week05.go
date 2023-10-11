@@ -8,12 +8,15 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 )
 
 func main() {
 
-	fmt.Println("Guess number game!")
+	seconds := time.Now().Unix()
+	rand.Seed(seconds)
 	answer := rand.Intn(100) + 1 // 1~100
+	fmt.Println("Guess number game!")
 	fmt.Println(answer)
 
 	for i := 0; i < 10; i++ {
