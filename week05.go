@@ -34,6 +34,7 @@ func main() {
 		}
 		if inputGuess == answer {
 			fmt.Println("Great! You got the number, Congraturation~")
+			break
 		} else if inputGuess < answer {
 			fmt.Println("Your guess number is lower than answer!")
 		} else if inputGuess > answer {
