@@ -13,11 +13,11 @@ import (
 
 func main() {
 
+	success := false
 	seconds := time.Now().Unix()
 	rand.Seed(seconds)
 	answer := rand.Intn(100) + 1 // 1~100
 	fmt.Println("Guess number game!")
-	fmt.Println(answer)
 
 	for i := 0; i < 10; i++ {
 		fmt.Println("Chance left : ", 10-i)
@@ -34,12 +34,17 @@ func main() {
 		}
 		if inputGuess == answer {
 			fmt.Println("Great! You got the number, Congraturation~")
+			success = true
 			break
 		} else if inputGuess < answer {
 			fmt.Println("Your guess number is lower than answer!")
 		} else if inputGuess > answer {
 			fmt.Println("Your guess number is higher than answer!")
 		}
+	}
+
+	if !success {
+		fmt.Println("Sorry, you didin't guess my number, It was:", answer)
 	}
 
 	/* 	dice := rand.Intn(6) + 1 // 1~6까지 랜덤한 수 출력
