@@ -30,11 +30,11 @@ func main() {
 			log.Fatal(err)
 		}
 		if inputGuess == answer {
-			fmt.Println("Great! You got the number, Congraturation~ ")
+			fmt.Println("Great! You got the number, Congraturation~")
 		} else if inputGuess < answer {
-			fmt.Println("Your guess number is lower than answer! ")
+			fmt.Println("Your guess number is lower than answer!")
 		} else if inputGuess > answer {
-			fmt.Println("Your guess number is higher than answer! ")
+			fmt.Println("Your guess number is higher than answer!")
 		}
 	}
 
