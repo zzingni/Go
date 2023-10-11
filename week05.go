@@ -4,12 +4,16 @@ import (
 	"bufio"
 	"fmt"
 	"log"
+	"math/rand"
 	"os"
 	"strconv"
 	"strings"
 )
 
 func main() {
+
+	dice := rand.Intn(6) + 1 // 1~6까지 랜덤한 수 출력
+	fmt.Println(dice)
 
 	fmt.Print("input Score : ")
 	reader := bufio.NewReader(os.Stdin)
