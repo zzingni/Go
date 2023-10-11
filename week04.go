@@ -14,6 +14,8 @@ func main() {
 
 	var b float32 = 8.34
 	fmt.Println(a * int(b))
+	fmt.Println(float32(a) > b) // 비교연산자
+
 	var c7 string // 변수명은 알파벳 대소문자로 시작해야 한다.
 	var d int
 	var e bool
